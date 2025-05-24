@@ -58,7 +58,8 @@ const prompt = ai.definePrompt({
   Expected Monthly Payment: {{{expectedMonthlyPayment}}}
 
   Based on this information, determine if a payment reminder should be sent and provide a reason.
-  Return a JSON object with 'shouldSendReminder' (true/false) and 'reminderReason'.',
+  Return a JSON object with 'shouldSendReminder' (true/false) and 'reminderReason'.
+`,
 });
 
 const paymentAlertSuggestionsFlow = ai.defineFlow(
