@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -119,7 +120,7 @@ export function AddLesseeDialog({ availableVehicles, onLesseeAdded }: AddLesseeD
               name="vehicleId"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Assign Vehicle (Optional)</FormLabel>
+                  <FormLabel>Vehicle ID/Number (Optional)</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger>
@@ -129,7 +130,7 @@ export function AddLesseeDialog({ availableVehicles, onLesseeAdded }: AddLesseeD
                     <SelectContent>
                       {availableVehicles.map((vehicle) => (
                         <SelectItem key={vehicle.id} value={vehicle.id}>
-                          {vehicle.make} {vehicle.model} ({vehicle.licensePlate})
+                          ID: {vehicle.id} - {vehicle.make} {vehicle.model} ({vehicle.licensePlate})
                         </SelectItem>
                       ))}
                       {availableVehicles.length === 0 && <SelectItem value="no-vehicle" disabled>No vehicles available</SelectItem>}
