@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -8,7 +9,7 @@ import {
   CarFront,
   Settings,
   LogOut,
-  SteeringWheel,
+  ShipWheel, // Changed from SteeringWheel
 } from "lucide-react";
 
 import {
@@ -58,7 +59,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <SidebarHeader className="p-4">
           <Link href="/dashboard" className="flex items-center gap-2">
             {/* Replace with actual logo if available */}
-            <SteeringWheel className="h-8 w-8 text-primary" />
+            <ShipWheel className="h-8 w-8 text-primary" />
             <h1 className="text-xl font-semibold text-primary">{APP_NAME}</h1>
           </Link>
         </SidebarHeader>
